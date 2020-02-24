@@ -5,9 +5,9 @@
   "scripts": {
     "react:build": "webpack --production --watch",
     "react:dev": "webpack --development --watch",
-    "server:build": "babel server.js --out-file server-compiled.js",
+    "server:build": "babel express-server/server.js --out-file express-server/server-compiled.js",
     "server:dev": "nodemon --ignore 'uploads/*' --ignore 'public/*' --ignore 'react-src/*' --exec babel-node express-server/server.js",
-    "server:run-build": "babel-node server-compiled.js"
+    "server:run-build": "babel-node express-server/server-compiled.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.1",
@@ -62,5 +62,17 @@
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
